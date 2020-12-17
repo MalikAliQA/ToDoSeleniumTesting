@@ -80,7 +80,7 @@ This shows the following
 
 From this we can see that we only had 4 tasks before now we have 5 with the correct fields, 
 
-You can follow the screenshot for each page to see how everypage is automatically tested 
+You can follow the screenshot for each page in /src/test/resources/reports/ each page has it own folder to see how everypage is automatically tested 
 
 
 
