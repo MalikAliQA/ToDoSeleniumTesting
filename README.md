@@ -40,6 +40,51 @@ Contains the front end testing for the ToDo Project, done in Eclipse using Selen
 		
 	}
 ```
-The first thing it does it go to the index page:
+driver.get(HomeNav.URL); goes to the index page:
 
 ![](/src/test/resources/reports/createtask/shot1.png)
+
+Then with webpage.navReadAllTaskPage(); we call this method which clicks the read all tasks button and takes you to the following page :
+
+![](/src/test/resources/reports/createtask/shot2.png)
+This is to show all the current tasks in the system so we can compare at the end if a task is added during our test or not 
+
+Next webpage.navCreateTaskPage(); takes you to the create a task page: 
+
+![](/src/test/resources/reports/createtask/shot3.png)
+
+Then task.createaTask("1", "To Buy", "Cake"); the createatask method takes in the three parameters and automatically enters the paramaters the methods code is: 
+```
+public void createaTask(String userid, String name, String body) {
+		userIdField.sendKeys(userid);
+		nameField.sendKeys(name);
+		bodyField.sendKeys(body);
+		saveTask.click();
+	}
+```
+because the code is modulate we can call this method in our test and have it do all the code within it, once the method is ran it shows the following output:
+
+![](/src/test/resources/reports/createtask/shot4.png)
+
+Then we run an assertsEqual to test if its actually done what it is supposed to do and see if that passes 
+
+And finally we go back to the read all tasks page to see if the task has been added 
+
+```
+webpage.navReadAllTaskPage();
+```
+
+This shows the following 
+
+![](/src/test/resources/reports/createtask/shot5.png)
+
+From this we can see that we only had 4 tasks before now we have 5 with the correct fields, 
+
+You can follow the screenshot for each page to see how everypage is automatically tested 
+
+
+
+
+
+
+
