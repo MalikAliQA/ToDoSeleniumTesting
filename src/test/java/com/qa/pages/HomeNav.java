@@ -5,7 +5,8 @@ import org.openqa.selenium.support.FindBy;
 
 public class HomeNav {
 	
-public static final String URL = "localhost:9092/index.html";
+public static final String URL = "http://localhost:9092/index.html";
+
 	
 	@FindBy(css = "#navbarSupportedContent > ul > li:nth-child(2) > a")
 	private WebElement createTaskLink;

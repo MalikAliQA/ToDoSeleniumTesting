@@ -75,6 +75,7 @@ public class ToDoTesting {
 		
 		driver.get(HomeNav.URL);
 		Helper.snapShot(driver, "src/test/resources/reports/createtask/shot1.png");
+		Thread.sleep(1000);
 		webpage.navReadAllTaskPage();
 		Helper.snapShot(driver, "src/test/resources/reports/createtask/shot2.png");
 		LOGGER.warning("Clicks add a task link");
